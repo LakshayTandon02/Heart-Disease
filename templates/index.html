@@ -166,12 +166,20 @@
       </form>
     </div>
 
-    {% if prediction %}
-    <div class="result mt-4">
-      <h4 class="text-success">Prediction Result:</h4>
-      <p class="lead font-extrabold">{{ prediction }}</p>
+   {% if prediction %}
+<div class="d-flex justify-content-center align-items-center vh-100">
+  <div class="card shadow-lg p-4 text-center border-0" style="max-width: 500px; border-radius: 20px;">
+    <div class="mb-3">
+      <div class="display-4">✅</div>
+      <h3 class="text-primary mt-2">Prediction Complete</h3>
+      <p class="lead mt-3">Your 10-Year Heart Disease Risk:</p>
+      <h1 class="fw-bold text-success">{{ prediction }}</h1>
     </div>
-    {% endif %}
+    <a href="/" class="btn btn-outline-primary mt-3">🔄 Predict Again</a>
+  </div>
+</div>
+{% endif %}
+
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
